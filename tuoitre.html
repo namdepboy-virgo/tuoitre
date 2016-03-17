@@ -3,10 +3,21 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-<head runat="server">
+<head >
     <title>Tuổi trẻ</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="style.css" type="text/css"/>
+    <script src="jquery/jquery-2.1.4.min.js"> </script>
+    <script src="jquery/jQuery-slimScroll-1.3.7/jquery.slimscroll.min.js"> </script>
+    <script> 
+$(function(){
+    $('.scroll-list').slimScroll({
+        height: '310px'
+		
+    });
+});
+
+</script>
 </head>
 
 <body>
@@ -70,7 +81,7 @@
                 <li><a title="Bạn đọc" href="http://tuoitre.vn/tin/ban-doc">Bạn đọc</a> </li>
                 <li><a title="Du lịch" href="http://dulich.tuoitre.vn">Du lịch</a> </li>
                 <li><a title="Media" href="http://media.tuoitre.vn">Media</a> </li>
-                <li><a title="Cần biết" href="http://tuoitre.vn/tin/can-biet" style="border: none">Cần biết</a> </li>
+                <li><a title="Cần biết" href="http://tuoitre.vn/tin/can-biet" style="border: none">Cần biết</a> </li> 
    	        </ul>       	
        
         </div>
@@ -95,7 +106,75 @@
         </div>
         
         <div id="left-side">
+        <!-- Section New -->
+        <div class="section-new">
+            
+            <div class="new-left">
+            
+            <div class="main-content">
+          <a href="">  <img src="images/content/thieuta.jpg"></a>
+            <h3> <a href="">Cần xử nghiêm vụ thiếu tá công an gây náo loạn trường học </a> </h3>
+            <p> TT - Nếu làm rõ khẩu súng mà thiếu tá Trần Vũ Khiêm sử dụng gây náo loạn trong trường học là súng quân dụng thì hành vi ông Khiêm có dấu hiệu tội đe dọa giết người. </p>
+            
+              </div>
+            <div class="sub-content">
+         
+            <ul>
+            <li style="margin-left: 0"> <a href="" > <img src="images/content/trieutien.jpg"> <h4>  Ảnh cuộc sống đời thường ở Triều Tiên </h4> </a> </li>
+             <li> </li>
+              <li> </li>
+              <li style="margin-left: 0"> </li>
+              <li> </li>
+              <li> </li>
+            
+            </ul>
+            
+            
+         
+            
+              </div>
+    </div>
+            
+            <div class="new-right">
+            <div class="right-1-scroll">
+            <div class="scroll-feature"> 
+          <a href="">  <img src="images/content/hoangtrunghai.jpg" > <h4>Sau chỉ đạo, Hà Nội gấp rút "cởi trói" cho doanh nghiệp </h4></a></div>
+            <div class="scroll-list">
+            <ul> 
+                <li><a href="#">Sau chỉ đạo, Hà Nội gấp rút “cởi trói” cho doanh nghiệp</a> </li>
+                <li><a href="#">Singapore phạt tù 9 năm rưỡi kẻ giết bạn gái người Việt</a> </li>
+                <li><a href="#">Chuyện thú vị về các tổng thống Mỹ </a></li>
+                <li><a href="#">Bắt nghi can cưỡng hiếp và cướp của 7 phụ nữ</a> </li>
+                <li> <a href="#">Hoãn tòa vì... trưởng phòng đi thay chủ tịch huyện</a> </li>
+                <li><a href="#">Lộ diện “tác giả” vụ bé bán vé số sinh con trước 16 tuổi?</a></li>
+                <li><a href="#">30 ngày trấn giữ đảo Đá Lớn</a></li>
+                <li><a href="#">“Nhậu khi mô quán đóng cửa thì về”</a></li>
+                <li><a href="#">Đoàn viên hỏi, Bí thư thứ nhất Trung ương Đoàn trả lời</a> </li>
+                
+                
+            </ul>
+             </div>
+             </div>           
+            <div class="right-2-noscroll">
+            	<div class="noscroll-title">  <a href="" > Thời sự & Suy nghĩ </a> </div>
+                 <div class="scroll-feature"> 
+          <a href="">  <img src="images/content/thuthue.jpg" > <h4>Thu thuế cũng phải thu phục lòng dân </h4></a></div>
+          <div class="noscroll-list"> 
+           <ul> 
+                <li><a href="#">Thiêng liêng hình bóng những con tàu	</a> </li>
+                <li><a href="#">Phân lô bán nền và khu “ổ chuột mới”</a> </li>
+              
+                </ul>
+          </div>
+            
+             </div>
+            
+             </div>
+            
         
+        <div class="clear" ></div>
+        
+         </div>
     	<!-- Section 1 -->
         <div class="section">
             <div class="section-title">
@@ -390,6 +469,8 @@
 		 <div class="clear"> </div>
         </div>
         
-	
+     
+   
+
 </body>
 </html>

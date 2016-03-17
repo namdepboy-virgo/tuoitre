@@ -160,6 +160,265 @@ body{
 	
 }
 
+#left-side .section-new
+{
+
+
+	
+}
+
+#left-side .new-left
+{
+	float: left;
+	
+	height: 756px;
+
+	
+}
+
+/* NEW LEFT */
+.new-left .main-content
+{
+	height: 398px;
+	width: 490px;
+	
+	
+	
+}
+
+.new-left .main-content img
+{
+	display:block;
+	
+	
+}
+
+.new-left .main-content p
+{
+	font-size: 14px;
+	color: #696969;
+	line-height: 20px;
+	margin-top: -11px;
+	
+	
+	overflow:hidden;
+	height: 60px;
+	
+}
+
+.new-left .main-content h3
+{
+ 	margin-top: 10px;	
+	overflow: hidden;	
+	
+}
+
+.new-left .sub-content
+{
+	margin-top: 12px;
+	height: 325px;
+	width: 490px;
+	
+	
+}
+
+.new-left .sub-content ul
+{
+	list-style-type: none;
+	
+	
+}
+
+.new-left .sub-content ul li
+{
+	float: left;
+	height: 149px;
+	width: 153px;
+
+	padding: 10px auto;
+	margin-left: 12px;
+	margin-bottom: 12px;
+	overflow: hidden;	
+}
+
+.new-left .sub-content ul li h4
+{
+	font-weight: bold;
+	font-size: 13px;
+	line-height: 18px;
+	
+	padding: 0px 2px;
+	margin-top: 8px;
+	color: #666;		
+	
+}
+
+.new-left .sub-content ul li:hover h4
+{
+	color: red;		
+	
+}
+
+.new-left .sub-content ul li img
+{
+
+	width: 153px;
+    height: 87px;
+	display: block;
+
+}
+
+
+
+
+/* NEW RIGHT */
+
+#left-side .new-right
+{
+
+  height: 756px;
+  width: 160px;
+  float: right;
+	
+}
+
+.new-right .scroll-feature
+{
+
+  height: 156px;
+  width: 100%;
+  overflow: hidden;
+	
+}
+
+.new-right .scroll-feature img
+{
+	width: 160px;
+    height: 90px;
+	display: block;
+	
+}
+
+.new-right .scroll-feature h4
+{
+	font-weight: bold;
+	font-size: 13px;
+	
+	
+	padding: 0px 2px;
+	margin-top: 8px;
+	
+	
+}
+.new-right .scroll-list
+{
+
+
+  height: 310px;
+  width: 100%;
+ 
+	overflow: auto;
+	
+
+	
+}
+
+.new-right .scroll-list ul
+{
+	list-style-type: none;
+	
+}
+
+.new-right .scroll-list ul li
+{
+	border-top: 1px dotted #ADADAD;
+	padding: 5px 1px;
+	
+}
+
+.new-right .scroll-list ul li:hover a
+{
+	color: red;
+	
+}
+
+.new-right .scroll-list a
+{
+	color: #666;
+	font-size: 13px;
+
+	
+}
+
+.new-right .right-2-noscroll
+{
+	
+}
+
+.new-right .noscroll-title
+{
+	border-bottom: 1px solid red;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	
+	
+	
+}
+
+.new-right .noscroll-title a
+{
+	font-size: 16px;
+	font-weight: bold;
+	color: #D44B4B;
+	
+	
+
+}
+
+.new-right .noscroll-list
+{
+	
+	height: 64px;
+	
+
+}
+
+.new-right .noscroll-list ul
+{
+	margin-top: -17px;
+	list-style-type: none;
+	border-top: 1px dotted #ADADAD;
+	
+}
+
+.new-right .noscroll-list ul li
+{
+	
+	padding-top: 5px;
+	
+}
+
+.new-right .noscroll-list ul li:hover a
+{
+	color: red;
+	
+}
+
+.new-right .noscroll-list a
+{
+	color: #666;
+	font-size: 13px;
+
+	
+}
+
+
+
+
+
+/* Category */
+
 #left-side .section
 {
 	width: 100%;
@@ -419,6 +678,12 @@ line-height: 16px;
 	
 }
 
+.bar2 ul
+{
+	list-style-type: none;
+	
+}
+
 .bar2 a
 {
 	font-size: 12px;
@@ -430,13 +695,16 @@ line-height: 16px;
 	
 /* Interface */
 
-a{
-
+a
+{
 	text-decoration: none;
-
 	color:#000000;
 }
 
+a:hover 
+{	
+	color: red;
+}
 
 
 ul{
