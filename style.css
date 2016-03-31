@@ -1,3 +1,4 @@
+
 body{
 	font-family: Arial;
 	
@@ -62,7 +63,7 @@ body{
 
 #middle
 {
-	height: 2450px;
+	height: 3000px;
 	position: relative;
 }
 
@@ -678,6 +679,105 @@ line-height: 16px;
 
 }
 
+/* -- Section THE THAO -- */
+
+ 
+
+
+.TheThao-content
+{
+	margin-top: 0px;
+	height: 353px;
+	width: 100%;
+	overflow: hidden;
+	
+}
+
+.TheThao-left
+{
+	height: 100%;
+	width: 374px;	
+
+	padding-right: 10px;
+	float: left;
+}
+
+.TheThao-left img
+{
+	width: 385px;
+	
+	height: 221px;
+	
+}
+
+.TheThao-left h4
+{
+	margin-top: 2px;
+}
+
+.TheThao-left p
+{
+	margin-top: -10px;
+	font-size: 13px;
+	line-height: 16px;
+	color: #545454;
+
+}
+
+.TheThao-right
+{
+	height: 100%;
+	width: 267px;	
+	
+	float: right;
+}
+
+.TheThao-right img
+{
+	width: 80px;
+	height: 45px;
+	
+	margin-right: 10px;
+	float: left;
+	
+	
+}
+.TheThao-right h4
+{
+		margin-top: 0;
+	
+
+}
+
+.TheThao-right ul
+{
+	
+	list-style-type: none;
+}
+
+.TheThao-right ul li
+{
+	
+	margin-bottom: 10px;
+	width: 100%;
+	height: 56px;
+	border-bottom: 1px dotted #ADADAD;
+	overflow: hidden;
+	
+	
+}
+
+.TheThao-right ul li a
+{
+	font-weight: bold;
+	font-size: 13px;
+	
+		
+	
+
+}
+
+
 /* right side */
 
 #right-side 
@@ -686,11 +786,127 @@ line-height: 16px;
 	right: 6px;
 	width: 300px;
 	height: 2300px;
-	border: 1px solid #ADADAD;
 	
 	
 }
 
+ /* --SLIDE SHOW -- */
+#right-side .categories-slideshow 
+{
+	margin-top: 16px;
+	margin-bottom: 16px;
+
+	background: #F5F5F5;
+	position: relative;
+	height: 255px;
+	
+	
+	
+}
+
+#right-side .categories-slideshow a:hover
+{
+	
+	color: #535353;
+
+	
+}
+
+.categories-slideshow ul
+{
+	list-style-type: none;
+
+}
+
+.categories-slideshow .subTitle
+{
+	 background: #B2DADF;
+	 margin-bottom: 5px;
+	 
+	 font-weight: bold;
+	 font-size: 13px;
+	 height: 30px;
+	 line-height: 30px;
+	 
+}
+
+.categories-slideshow .subTitle a
+{
+	 color: #008394;	 	 
+}
+
+.categories-slideshow .subTitle a:hover
+{
+	 color: #535353;
+	 
+}
+
+#right-side .categories-slideshow .subTitle ul li
+{
+	display: inline-block;
+	padding: 1px 7px;
+	
+}
+
+.categories-slideshow .bigPics img
+{
+	position: absolute;
+	width: 300px;
+	height: 170px;
+	display: none;
+	
+}
+
+
+.categories-slideshow .slideTitle
+{
+	position: absolute;
+	bottom: 5px;
+	width: 100%;
+	height: 45px;
+	background: #B2DADF;
+	line-height: 19px;
+	
+	overflow: hidden;
+	
+}
+
+.categories-slideshow .slideTitle ul li
+{
+	
+	position: absolute;
+	
+	font-weight: bold;
+	font-size: 13px;
+	text-align: left;
+	
+	
+	
+}
+
+.categories-slideshow .slideTitle ul li a
+{
+	color: #008394;
+
+	display: none;
+	padding: 5px 10px;
+	
+	
+	
+	
+	
+}
+
+
+
+
+.slideTitle ul .active
+{
+
+	display: block !important;
+	
+	
+}
 /* BOTTOM */
 #bottom
 {
@@ -839,3 +1055,26 @@ ul{
 	clear: both;
 }
 	
+
+
+
+
+.left-of-right{
+	width:50%; 
+	margin-top:7px;	
+	float:left; 
+}
+.right-of-right{
+	width:50%; 
+	float:right
+}
+.right-of-right>ul{
+	margin-left:20px;
+	font-size:14px;  
+	font-family:'Times New Roman';
+}
+.right-of-right>ul>li{
+	padding-top:5px; 
+}
+
+

@@ -25,6 +25,78 @@ $(function(){
 });
 
 </script>
+
+<script language="javascript" > 
+
+var currentTitle;
+var currentImg;
+var currentIndex = -1;
+
+var myTimer;
+
+
+
+$(document).ready(function(e) {
+    showNext();
+	myTimer = setTimeout( "showNext()", 3000 );
+});
+
+function showNext()
+{
+	var len = $('.bigPics img').length;
+	
+	var next;
+	if ( currentIndex < len - 1 )
+	{
+		next = currentIndex + 1;
+	}
+	else
+	{
+		next = 0;
+	}
+	
+	showPics(next);
+}
+
+function showPics(next)
+{
+	
+	var nextImg = $('.bigPics img')[next];
+	
+
+	$(currentImg).css('z-index',2);
+	
+
+	if ( currentImg )
+	{
+		
+		if ( nextImg != currentImg )
+		{
+			clearTimeout(myTimer);
+			$(currentImg).fadeOut( 500, function()
+			{		
+				myTimer = setTimeout( "showNext()", 3000 );	
+				$(this).css({'display':'none','z-index':1})
+				
+			});
+			
+		}
+		
+	}
+	
+	$(nextImg).css({'display':'block'});
+
+	
+	currentIndex = next;
+	currentImg = nextImg;
+	
+	 $('.slideTitle li a').removeClass('active');
+		$($('.slideTitle li a')[next]).addClass('active');
+	
+
+	
+}
+</script>
 </head>
 
 <body>
@@ -128,11 +200,11 @@ $(function(){
          
             <ul>
             <li style="margin-left: 0"> <a href="" > <img src="images/content/trieutien.jpg"> <h4>  Ảnh cuộc sống đời thường ở Triều Tiên </h4> </a> </li>
-             <li> </li>
-              <li> </li>
-              <li style="margin-left: 0"> </li>
-              <li> </li>
-              <li> </li>
+             <li> <a href="" > <img src="images/content/trieutien.jpg"> <h4>  Ảnh cuộc sống đời thường ở Triều Tiên </h4> </a></li>
+              <li> <a href="" > <img src="images/content/trieutien.jpg"> <h4>  Ảnh cuộc sống đời thường ở Triều Tiên </h4> </a></li>
+              <li style="margin-left: 0"> <a href="" > <img src="images/content/trieutien.jpg"> <h4>  Ảnh cuộc sống đời thường ở Triều Tiên </h4> </a></li>
+              <li> <a href="" > <img src="images/content/trieutien.jpg"> <h4>  Ảnh cuộc sống đời thường ở Triều Tiên </h4> </a></li>
+              <li> <a href="" > <img src="images/content/trieutien.jpg"> <h4>  Ảnh cuộc sống đời thường ở Triều Tiên </h4> </a></li>
             
             </ul>
             
@@ -144,24 +216,23 @@ $(function(){
             
             <div class="new-right">
             <div class="right-1-scroll">
-            <div class="scroll-feature"> 
-          <a href="">  <img src="images/content/hoangtrunghai.jpg" > <h4>Sau chỉ đạo, Hà Nội gấp rút "cởi trói" cho doanh nghiệp </h4></a></div>
-            <div class="scroll-list">
-            <ul> 
-                <li><a href="#">Sau chỉ đạo, Hà Nội gấp rút “cởi trói” cho doanh nghiệp</a> </li>
-                <li><a href="#">Singapore phạt tù 9 năm rưỡi kẻ giết bạn gái người Việt</a> </li>
-                <li><a href="#">Chuyện thú vị về các tổng thống Mỹ </a></li>
-                <li><a href="#">Bắt nghi can cưỡng hiếp và cướp của 7 phụ nữ</a> </li>
-                <li> <a href="#">Hoãn tòa vì... trưởng phòng đi thay chủ tịch huyện</a> </li>
-                <li><a href="#">Lộ diện “tác giả” vụ bé bán vé số sinh con trước 16 tuổi?</a></li>
-                <li><a href="#">30 ngày trấn giữ đảo Đá Lớn</a></li>
-                <li><a href="#">“Nhậu khi mô quán đóng cửa thì về”</a></li>
-                <li><a href="#">Đoàn viên hỏi, Bí thư thứ nhất Trung ương Đoàn trả lời</a> </li>
-                
-                
-            </ul>
-             </div>
-             </div>           
+                <div class="scroll-feature"> 
+                    <a href="">  <img src="images/content/hoangtrunghai.jpg" > <h4>Sau chỉ đạo, Hà Nội gấp rút "cởi trói" cho doanh nghiệp </h4></a>
+                </div>
+                <div class="scroll-list">
+                    <ul> 
+                        <li><a href="#">Sau chỉ đạo, Hà Nội gấp rút “cởi trói” cho doanh nghiệp</a> </li>
+                        <li><a href="#">Singapore phạt tù 9 năm rưỡi kẻ giết bạn gái người Việt</a> </li>
+                        <li><a href="#">Chuyện thú vị về các tổng thống Mỹ </a></li>
+                        <li><a href="#">Bắt nghi can cưỡng hiếp và cướp của 7 phụ nữ</a> </li>
+                        <li> <a href="#">Hoãn tòa vì... trưởng phòng đi thay chủ tịch huyện</a> </li>
+                        <li><a href="#">Lộ diện “tác giả” vụ bé bán vé số sinh con trước 16 tuổi?</a></li>
+                        <li><a href="#">30 ngày trấn giữ đảo Đá Lớn</a></li>
+                        <li><a href="#">“Nhậu khi mô quán đóng cửa thì về”</a></li>
+                        <li><a href="#">Đoàn viên hỏi, Bí thư thứ nhất Trung ương Đoàn trả lời</a> </li>
+                    </ul>
+                </div>
+            </div>           
             <div class="right-2-noscroll">
             	<div class="noscroll-title">  <a href="" > Thời sự & Suy nghĩ </a> </div>
                  <div class="scroll-feature"> 
@@ -202,18 +273,19 @@ $(function(){
             <p> <a href="" ><img src="images/content/8bletruc.jpg" align="left"></a> TT - Hôm nay 6-3, theo thông báo của UBND P.Điện Biên (Q.Ba Đình, Hà Nội) gửi Công ty cổ phần May Lê Trực - chủ công trình số 8B Lê Trực, lực lượng chức năng Q.Ba Đình tổ chức cưỡng chế phá dỡ phần sai phép tại công trình số 8B Lê Trực. </p>
             </div>
             <div class="content-right">
-             <div class="right-feature"> <h5> <a href=""> <img src="images/content/thuydai.jpg" align="left"> TP.HCM tháo dỡ 7 thủy đài bỏ hoang </a> </h5> </div>
-             
+             <div class="right-feature"> 
+             	<h5> <a href=""> <img src="images/content/thuydai.jpg" align="left"> TP.HCM tháo dỡ 7 thủy đài bỏ hoang </a> </h5> 
+             </div>
              
              <div class="right-list"> 
-            <p>
-             <ul>
-             <li><a href="">Bắt nhiều trộm cướp, thi đua phải xuất sắc chứ !</a></li>
-             <li><a href=""> ​Điểm tin: Người dân hiến kế dẹp trộm cướp ở TP.HCM </a></li>
-            
-             <li><a href=""> ​Bạc Liêu: kè Gành Hào bị sạt lở nghiêm trọng</a></li>
-             </ul>
-            </p>
+                <p>
+                 <ul>
+                 <li><a href="">Bắt nhiều trộm cướp, thi đua phải xuất sắc chứ !</a></li>
+                 <li><a href=""> ​Điểm tin: Người dân hiến kế dẹp trộm cướp ở TP.HCM </a></li>
+                
+                 <li><a href=""> ​Bạc Liêu: kè Gành Hào bị sạt lở nghiêm trọng</a></li>
+                 </ul>
+                </p>
              </div>
              </div>
             <div class="clear"> </div>
@@ -298,7 +370,7 @@ $(function(){
             </div>       
          </div>
          
-         <!-- SECTION TVO -->
+         <!-- SECTION FEATURE TVO -->
          <div class="sectionTVO" >
            <div class="TVO-title">
                <a href="" > TVO </a>
@@ -307,10 +379,11 @@ $(function(){
             
             </div>
          <div class="TVO-content"> 
-         <div class="TVO-left">
+         <div class="TVO-left" style="height:300px">
          
          <div class="TVOleft-video"> 
-         <img src="images/content/vid1.png" >
+         	<iframe style="width:100%; height:230px" frameborder="0" allowfullscreen="1" title="YouTube video player" src="https://www.youtube.com/embed/4RT5aJUl2LU?autoplay=0&amp;controls=1&amp;iv_load_policy=3&amp;cc_load_policy=1&amp;modestbranding=1&amp;rel=0&amp;showinfo=0&amp;wmode=transparent&amp;widget_referrer=http%3A%2F%2Fwww.adidas.com.vn%2F&amp;enablejsapi=1&amp;origin=http%3A%2F%2Fwww.adidas.com.vn">
+         	</iframe>
          </div>
          <h4> <a href="" > Tin nóng 24h ngày 19-3-2016: Nghiện rượu bia và những hậu quả khôn lường </a> </h4>
          <p> Sẽ lấy nước từ hồ Dầu Tiếng phục vụ nước sinh hoạt cho TPHCM; Báo động tình trạng rải muối nuôi tôm... </p>
@@ -414,11 +487,223 @@ $(function(){
             <div class="clear"> </div>
             </div>
         
-        
+      
          </div>
+         <!-- SECTION FEATURE THE THAO -->
+      <div class="section">
+            <div class="section-title">
+            <ul>
+            <li> <a href="" > Thể thao  </a> > </li>
+            <li> <a href="" > Bóng đá </a> </li>
+            <li> <a href="" > Quần vơt </a> </li>
+            <li> <a href="" > CáC môn khác </a> </li>
+            <li> <a href="" > Thể thao & Cuộc sống </a> </li>
+   
+           </ul>
+           </div>
+            <div class="TheThao-content"> 
+         <div class="TheThao-left" style="height:300px">
          
+        
+         	<img src="images/content/danhbaiuran.jpg"  width="385px" height="321px">
+        
+         <h4> <a href="" > Đánh bại Iran, tuyển cờ vua nữ VN tiếp tục dẫn đầu giải châu Á </a> </h4>
+         <p> TTO - Ngày 30-3, các nữ kỳ thủ VN đã thắng 3-1 trước tuyển nữ Iran ở trận thứ ba để duy trì ngôi vị dẫn đầu Giải cờ vua vô địch đồng đội châu Á 2016 diễn ra tại Các Tiểu Vương quốc Ả Rập Thống Nhất (UAE). </p>
+          </div>
+         <div class="TheThao-right">
+         <ul> 
+         <li> <a href=""><img src="images/content/vid1-1.jpg"  >  <h4> Valencia sa thải HLV Gary Neville  </h4> </a> </li>
+           <li> <a href=""><img src="images/content/vid2.jpg"  > <h4> Điểm tin sáng 31-3: Messi muốn ghi bàn thứ 500 vào lưới Real </h4> </a> </li>
+             <li> <a href=""><img src="images/content/vid3.jpg"  > <h4> "Hữu Thắng rất chịu chơi"!  </h4> </a> </li>
+               <li> <a href=""><img src="images/content/vid4.jpg"  > <h4> Tuyển Brazil lâm nguy</h4></a> </li>
+                <li> <a href=""><img src="images/content/vid1-1.jpg"  > <h4> Điểm tin tối 30-3: ​Tân binh Sài Gòn FC hạ gục Thái Sơn Nam </h4> </a> </li>
+          
+         </ul>
+         
+           </div>
+         
+         <div class="clear"> </div>
          </div>
-        <div id="right-side"> </div>
+            </ul>
+            </div>
+       
+        
+        
+            <div class="clear"> </div>
+         
+        
+        
+       
+         </div>  <!-- div left side -->
+         
+         
+         <!-- RIGHT SIDE -->
+        <div id="right-side"> 
+        
+        <div class="categories">
+        <div style="border-bottom:1px solid #69F; font-size:15px"> <a style="color:#69F" href="#">Góc Sài Gòn</a> </div>
+        <div class="left-of-right"> 
+            <a href="" ><img src="images/content/8bletruc.jpg" align="left"></a> 
+            <h5> <a href=""> Brazil: đối đầu chính trị và tư pháp </a> </h5>
+        </div>            
+        <div class="right-of-right"> 
+        	<ul style="padding-top:5px; font-size:14px; margin-left:20px; font-family:Georgia, 'Times New Roman', Times, serif"> 
+                <li><a href="#">Sau chỉ đạo, Hà Nội gấp rút “cởi trói” cho doanh nghiệp</a> </li>
+                <li><a href="#">Singapore phạt tù 9 năm rưỡi kẻ giết bạn gái người Việt</a> </li>
+            </ul>
+        </div>
+        </div>
+        <div class="clear"></div>
+        
+        <div class="categories">
+         <div style="border-bottom:1px solid #69F;font-size:15px"> <a style="color:#69F" href="#">Dân đặt hàng lãnh đạo TP.HCM</a> </div>
+        <div class="left-of-right"> 
+            <a href="" ><img src="images/content/8bletruc.jpg" align="left"></a> 
+            <h5> <a href=""> Brazil: đối đầu chính trị và tư pháp </a> </h5>
+        </div>            
+        <div class="right-of-right"> 
+        	<ul style="padding-top:5px; font-size:14px; margin-left:20px; font-family:Georgia, 'Times New Roman', Times, serif"> 
+                <li><a href="#">Sau chỉ đạo, Hà Nội gấp rút “cởi trói” cho doanh nghiệp</a> </li>
+                <li><a href="#">Singapore phạt tù 9 năm rưỡi kẻ giết bạn gái người Việt</a> </li>
+                <li><a href="#">Sau chỉ đạo, Hà Nội gấp rút “cởi trói” cho doanh nghiệp</a> </li>
+            </ul>
+        </div>
+        </div>
+        <div class="clear"></div>
+        
+        <div class="categories-slideshow">
+        <div class="subTitle" > 
+        <ul >
+        <li> <a href="#">Góc ảnh</a> </li>
+        <li> <a href="#"> Audio</a> </li>
+        <li> <a href="#">Video</a> </li>
+        </ul>
+         </div>
+        <div id="slideshow">
+        <div class="bigPics">
+        <img src="images/content/slideshow1.jpg" />
+        <img src="images/content/slideshow2.jpg" />
+        <img src="images/content/slideshow3.jpg" />
+        </ul>  
+         </div>
+       
+            <div class="slideTitle">
+            <ul> 
+            <li><a  class="active"  href="#"> Hoa hậu Paraguay trở thành Hoa hậu của các hoa hậu Hoa hậu Paraguay trở thành Hoa hậu của các hoa hậu</a> </li>
+            <li> <a  href="#"> Một nước Bỉ kiên cường và mạnh mẽ </a> </li>
+            <li> <a  href="#"> Lan Khuê: người có trang phục da hội đẹp nhất </a></li>
+            </ul> 
+            </div>
+        </div>
+        </div>
+        <div class="clear"> </div>
+        
+        
+        <div class="categories">
+          <div style="border-bottom:1px solid #69F;font-size:15px"> <a style="color:#69F" href="#">Khám phá</a> </div>
+        <div class="left-of-right"> 
+            <a href="" ><img src="images/content/8bletruc.jpg" align="left"></a> 
+            <h5> <a href=""> Brazil: đối đầu chính trị và tư pháp </a> </h5>
+        </div>            
+        <div class="right-of-right"> 
+        	<ul style="padding-top:5px; font-size:14px; margin-left:20px; font-family:Georgia, 'Times New Roman', Times, serif"> 
+                <li><a href="#">Sau chỉ đạo, Hà Nội gấp rút “cởi trói” cho doanh nghiệp</a> </li>
+                <li><a href="#">Singapore phạt tù 9 năm rưỡi kẻ giết bạn gái người Việt</a> </li>
+                <li><a href="#">Sau chỉ đạo, Hà Nội gấp rút “cởi trói” cho doanh nghiệp</a> </li>
+            </ul>
+        </div>
+        </div>
+        <div class="clear"></div>
+        
+        <div class="categories">
+        <div style="border-bottom:1px solid #69F;font-size:15px"> <a style="color:#69F" href="#">Tin đồ họa</a> </div>
+        <div class="left-of-right"> 
+            <a href="" ><img src="images/content/8bletruc.jpg" align="left"></a> 
+            <h5> <a href=""> Brazil: đối đầu chính trị và tư pháp </a> </h5>
+        </div>            
+        <div class="right-of-right"> 
+        	<ul style="padding-top:5px; font-size:14px; margin-left:20px; font-family:Georgia, 'Times New Roman', Times, serif"> 
+                <li><a href="#">Sau chỉ đạo, Hà Nội gấp rút “cởi trói” cho doanh nghiệp</a> </li>
+                <li><a href="#">Singapore phạt tù 9 năm rưỡi kẻ giết bạn gái người Việt</a> </li>
+                <li><a href="#">Sau chỉ đạo, Hà Nội gấp rút “cởi trói” cho doanh nghiệp</a> </li>
+            </ul>
+        </div>
+        </div>
+        <div class="clear"></div>
+        
+        
+        <div class="categories">
+        <div style="border-bottom:1px solid #69F;font-size:15px"> <a style="color:#69F" href="#">Giải trí 24h</a> </div>
+        <div class="left-of-right"> 
+            <a href="" ><img src="images/content/8bletruc.jpg" align="left"></a> 
+            <h5> <a href=""> Brazil: đối đầu chính trị và tư pháp </a> </h5>
+        </div>            
+        <div class="right-of-right"> 
+        	<ul style="padding-top:5px; font-size:14px; margin-left:20px; font-family:Georgia, 'Times New Roman', Times, serif"> 
+                <li><a href="#">Sau chỉ đạo, Hà Nội gấp rút “cởi trói” cho doanh nghiệp</a> </li>
+                <li><a href="#">Singapore phạt tù 9 năm rưỡi kẻ giết bạn gái người Việt</a> </li>
+                <li><a href="#">Sau chỉ đạo, Hà Nội gấp rút “cởi trói” cho doanh nghiệp</a> </li>
+            </ul>
+        </div>
+        </div>
+        <div class="clear"></div>
+        
+        
+        
+        <div class="categories">
+        <div style="border-bottom:1px solid #69F;font-size:15px"> <a style="color:#69F" href="#">Đọc nhiều</a> </div>		
+             <div class="right-feature" style="margin-top:-15px; border-bottom:1px dotted #999"> 
+             	<h5> <a href=""> <img width="30%" src="images/content/thuydai.jpg" align="left"> TP.HCM tháo dỡ 7 thủy đài bỏ hoang </a> </h5> 
+             </div>             
+             <div class="right-list"> 
+                 <ul style="margin-left:15px; color:#999">
+                     <li><a style="color:#999" href="">Bắt nhiều trộm cướp, thi đua phải xuất sắc chứ!</a></li>
+                     <li><a style="color:#999" href=""> ​Điểm tin: Người dân hiến kế dẹp trộm cướp ở TP.HCM </a></li>
+                     <li><a style="color:#999" href=""> ​Bạc Liêu: kè Gành Hào bị sạt lở nghiêm trọng</a></li>
+                     <li><a style="color:#999" href="">Bắt nhiều trộm cướp, thi đua phải xuất sắc chứ!</a></li>
+                     <li><a style="color:#999" href=""> ​Điểm tin: Người dân hiến kế dẹp trộm cướp ở TP.HCM </a></li>
+                     <li><a style="color:#999" href=""> ​Bạc Liêu: kè Gành Hào bị sạt lở nghiêm trọng</a></li>
+                     <li><a style="color:#999" href="">Bắt nhiều trộm cướp, thi đua phải xuất sắc chứ!</a></li>     
+                 </ul>
+             </div>
+             </div>
+            <div class="clear"> </div>
+        
+        <div class="categories">
+        <div style="border-bottom:1px solid #69F;font-size:15px"> <a style="color:#69F" href="#">Thế giới xe</a> </div>		
+             <div class="right-feature" style="margin-top:-15px; border-bottom:1px dotted #999"> 
+             	<h5> <a href=""> <img width="30%" src="images/content/thuydai.jpg" align="left"> TP.HCM tháo dỡ 7 thủy đài bỏ hoang </a> </h5> 
+             </div>             
+             <div class="right-list"> 
+                 <ul style="margin-left:15px; color:#999">
+                     <li><a style="color:#999" href="">Bắt nhiều trộm cướp, thi đua phải xuất sắc chứ!</a></li>
+                     <li><a style="color:#999" href=""> ​Điểm tin: Người dân hiến kế dẹp trộm cướp ở TP.HCM </a></li>
+                     <li><a style="color:#999" href=""> ​Bạc Liêu: kè Gành Hào bị sạt lở nghiêm trọng</a></li>
+                     <li><a style="color:#999" href="">Bắt nhiều trộm cướp, thi đua phải xuất sắc chứ!</a></li>   
+                 </ul>
+             </div>
+             </div>
+            <div class="clear"> </div>
+            
+            <div class="categories">
+            <div style="border-bottom:1px solid #69F;font-size:15px"> <a style="color:#69F" href="#">Tiêu điểm</a> </div>		
+             <div class="right-feature" style="margin-top:-15px; border-bottom:1px dotted #999"> 
+             	<h5> <a href=""> <img width="30%" src="images/content/thuydai.jpg" align="left"> TP.HCM tháo dỡ 7 thủy đài bỏ hoang </a> </h5> 
+             </div>             
+             <div class="right-list"> 
+                 <ul style="margin-left:15px; color:#999">
+                     <li><a style="color:#999" href="">Bắt nhiều trộm cướp, thi đua phải xuất sắc chứ!</a></li>
+                     <li><a style="color:#999" href=""> ​Điểm tin: Người dân hiến kế dẹp trộm cướp ở TP.HCM </a></li>
+                     <li><a style="color:#999" href=""> ​Bạc Liêu: kè Gành Hào bị sạt lở nghiêm trọng</a></li>
+                     <li><a style="color:#999" href="">Bắt nhiều trộm cướp, thi đua phải xuất sắc chứ!</a></li>     
+                 </ul>
+             </div>
+             </div>
+            <div class="clear"> </div>
+        
+            
+        
+        </div>
         
         
 </div>
@@ -440,10 +725,10 @@ $(function(){
                 </div>
             	<div class="logoApp" >
               <ul>
-              <li><a href="#"><img src="images/btn-googleplay.jpg" width="100%"  alt=""/></a></li>
-              <li><a href="#"> <img src="images/btn-ios.jpg"  alt=""/> </a></li>
+              <li><a href="https://play.google.com/store/apps/details?id=vn.tuoitre.app"><img src="images/btn-googleplay.jpg" width="100%"  alt=""/></a></li>
+              <li><a href="https://itunes.apple.com/us/app/tuoi-tre-online/id974433568?l=vi&ls=1&mt=8"> <img src="images/btn-ios.jpg"  alt=""/> </a></li>
               </ul>
-               <span class="toasan"><a href="#">Gửi bài về Tòa sạn</a> </span>
+               <span class="toasan"><a href="http://tuoitre.vn/trang/lien-he">Gửi bài về Tòa sạn</a> </span>
              </div>
             
             	<div class="clear"> </div>
