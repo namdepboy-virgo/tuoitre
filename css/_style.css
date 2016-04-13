@@ -1,0 +1,168 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	background-color:#BAC8CF
+}
+#banner {
+	background-image:url(../img/banner.png);
+	background-repeat:no-repeat;
+	height: 136px;
+	width: 100%;
+}
+#menu {
+	background-color: #ff8c05;
+	height: 40px;
+	width: 100%;
+}
+#content {
+	margin-top:10px;
+	/*background-color: #CCC;*/
+	height: auto;
+	width: 100%;
+}
+#footer {
+	background-color: #ff8c05;
+	height: 150px;
+	width: 100%;
+}
+div#wrapper{
+	margin:auto;
+	width:1000px;
+	background-color:#FFF;
+	border:1px solid #ff8c05
+}
+#menu ul li{
+	list-style-type:none;
+	float:left;	
+	padding-left:20px;
+	padding-right:20px;
+	padding-top:10px;
+	height:30px;
+	border-right: 1px solid #FDDEBB;
+	position: relative
+}
+#menu ul li:hover, #menu ul li a:hover{
+	background:#39F;
+	color:#FFF;
+	font-size:18px;	
+	text-decoration:underline
+}
+div#content-left{
+	width:70%;
+	height:auto;
+	/*background:#0F0;*/
+	float:left
+}
+div#content-right{
+	width:29%;
+	height:auto;
+	float:right;
+}
+div.box{
+	width:auto;
+	height:auto;
+	border:1px solid #D3D3D3;
+	padding:5px
+}
+div.box-left{
+	width:49.5%;
+	height:auto;
+	float:left;
+}
+div.box-right{
+	width:48%;	
+	height:auto;
+	float:right;
+	padding:5px;
+}
+div.box-right ul{
+	margin-left:20px;
+}
+div.box-left img{
+	width:100%
+}
+p.tieude{
+	color:#09F;
+	font-size:16px;
+	font-weight:bold;
+}
+p.tomtattin{
+	text-indent:20px
+}
+div.xoa{
+	clear:both
+}
+div.box-tin{
+	border-bottom:1px dotted #CCCCCC;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+div.box-tin img{
+	width:80px;
+	float:left;
+	margin-right:10px;
+}
+div.tieudebox{
+	width:99%;
+	height:21px;
+	background:url(../img/tiedebox.png);
+	background-repeat:no-repeat;
+	border-bottom:2px solid #ff8c05;
+	margin-bottom:10px;
+	padding-top:5px;
+	padding-left:6px;
+	color:#FFF
+}
+div.no-padding{
+	padding:0px;
+}
+div.no-border{
+	border:none;
+}
+#menu ul li a{
+	text-decoration:none;
+	color:#000
+}
+p.tieude a, div.box-tin p a{
+	text-decoration:none;
+	color:#39F
+}
+p.tieude a:hover, div.box-tin p a:hover{ 
+	color:#F90
+}
+
+.box-right>ul>li>a{
+	color:#000;
+	text-decoration:none;
+	font-size:18px
+}
+.box-right>ul>li>a:hover{
+	color:#F00
+}
+
+
+
+
+
+
+
+
+
+/*Menu phan cap*/
+#menu ul li ul{ 
+	display: none; 
+	position: absolute; 
+	background: #FF6633; 
+	width:auto; 
+	left:0px
+}
+#menu ul li:hover ul{ 
+	display: block
+}
+#menu>ul>li>ul>li{ 
+	border-right:none;
+	border-bottom: 1px solid #FDDEBB;
+	width:100px
+}

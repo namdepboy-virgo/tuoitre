@@ -1,0 +1,68 @@
+/* CSS Document */
+*{
+	margin:0px; padding:0px
+}
+body{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	background:#BCFEFC;
+}
+#banner{
+	width:100%;
+	height:100px;
+	background:#39F;
+	margin-bottom:10px;	
+	font-size:75px;
+	color:#FFF;
+	box-shadow: 0px 2px 2px rgba(0,0,0,0.5)
+}
+#menu{
+	width:10%;
+	height:auto;
+	background:#BCFEFC;
+	float:left;
+	border:2px solid #FFF;
+	position:fixed;
+	box-shadow: 0px 2px 2px rgba(0,0,0,0.5)
+}
+#content{
+	width:89%;
+	height:auto;
+	background:#BCFEFC;
+	float:right;
+}
+#footer{
+	margin-top:10px;
+	width:100%;
+	height:100px;
+	background:#39F;
+}
+div.xoa{
+	clear:both
+}
+div#box-chucnang{
+	width:auto;
+	height:auto;
+	padding:10px;
+	background:#BCFEFC;
+	text-align:center
+}
+div#box-chucnang:hover{
+	background:#39F
+}
+#menu>a{
+	text-decoration:none;
+	color:#000
+}
+#menu a:hover{
+	color:#FFF
+}
+div.left{
+	width:30%;
+	float:left;
+	padding-left:13%
+}
+div.right{
+	width:49%;
+	float:right
+}

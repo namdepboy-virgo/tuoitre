@@ -1,0 +1,17 @@
+/* CSS Document */
+#customers{
+	border-collapse:collapse;	
+	border:#39F;
+}
+#customers tr td{
+	padding-left:10px;
+	height:30px
+}
+#customers tr:hover{
+	background:#39F;
+}
+
+.doimaunen{
+	background-color:#39F;
+	color:#FFF
+}
